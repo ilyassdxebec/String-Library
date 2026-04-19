@@ -1,35 +1,30 @@
-# 📦 C++ Utility Libraries
+# 🧵 clsString — C++ String Utility Library
 
-A collection of reusable C++ classes that extend the standard library with clean, OOP-based utilities. Each class provides both **static methods** (use without an object) and **instance methods** (use on an object).
-
----
-
-## 📁 Project Structure
-├── clsString.h
-├── clsDate.h
-├── clsMath.h
-└── main.cpp
+A C++ class that extends `std::string` with a collection of useful string manipulation methods. Each method is available as both a **static method** (use on any string) and an **instance method** (use on the object's stored value).
 
 ---
 
-## 🧵 clsString
+## ⚙️ How to Use
 
-A wrapper around `std::string` with extended string manipulation utilities.
-
-### Instance Usage
+1. Clone the repo
+2. Include the header
 ```cpp
-clsString str("Hello World");
-str.CountWords();        // 2
-str.Value = "New text";  // property setter
-str.GetValue();          // "New text"
+#include "clsString.h"
 ```
+3. Create an instance or use static methods directly
 
-### Static Usage
 ```cpp
+// Instance
+clsString str("Hello World");
+str.CountWords(); // 2
+
+// Static
 clsString::CountWords("Hello World"); // 2
 ```
 
-### Methods
+---
+
+## 📋 Methods
 
 | Method | Type | Description |
 |---|---|---|
@@ -37,73 +32,6 @@ clsString::CountWords("Hello World"); // 2
 | `CountWords(string S)` | Static | Returns word count of any string |
 | `GetValue()` | Instance | Returns the stored string |
 | `SetValue(string S)` | Instance | Sets the stored string |
-
----
-
-## 🔢 clsMath
-
-A utility class for common mathematical operations.
-
-### Static Usage
-```cpp
-clsMath::Add(5, 3);       // 8
-clsMath::Power(2, 10);    // 1024
-clsMath::IsEven(4);       // true
-```
-
-### Methods
-
-| Method | Type | Description |
-|---|---|---|
-| `Add(a, b)` | Static | Returns sum of two numbers |
-| `Power(base, exp)` | Static | Returns base raised to exp |
-| `IsEven(n)` | Static | Returns true if number is even |
-
----
-
-## 📅 clsDate
-
-A utility class for date manipulation and formatting.
-
-### Instance Usage
-```cpp
-clsDate date(1, 1, 2024);
-date.Print();              // 01/01/2024
-date.AddDays(10);          // moves date forward 10 days
-```
-
-### Static Usage
-```cpp
-clsDate::IsLeapYear(2024); // true
-clsDate::DaysBetween(d1, d2);
-```
-
-### Methods
-
-| Method | Type | Description |
-|---|---|---|
-| `Print()` | Instance | Prints formatted date |
-| `AddDays(n)` | Instance | Adds n days to the date |
-| `IsLeapYear(year)` | Static | Returns true if leap year |
-| `DaysBetween(d1, d2)` | Static | Returns days between two dates |
-
----
-
-## ⚙️ How to Use
-
-1. Clone the repo
-```bash
-git clone https://github.com/yourusername/cpp-utility-libraries.git
-```
-
-2. Include the header you need
-```cpp
-#include "clsString.h"
-#include "clsMath.h"
-#include "clsDate.h"
-```
-
-3. Use static methods directly or create an instance
 
 ---
 
