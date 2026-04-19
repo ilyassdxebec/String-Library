@@ -24,7 +24,7 @@ clsString::CountWords("Hello World"); // 2
 
 ---
 
-## 📋 Methods
+## 📋 Methods Example (there are lots more): 
 
 | Method | Type | Description |
 |---|---|---|
@@ -32,6 +32,7 @@ clsString::CountWords("Hello World"); // 2
 | `CountWords(string S)` | Static | Returns word count of any string |
 | `GetValue()` | Instance | Returns the stored string |
 | `SetValue(string S)` | Instance | Sets the stored string |
+
 
 ---
 
