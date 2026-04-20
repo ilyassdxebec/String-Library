@@ -416,5 +416,15 @@ class clsString
 
 		 return Joined.substr(0, Joined.length() - delim.length());
 	 }
+
+	 static bool isEmpty(const string &S)
+	 {
+		 return (S == "") ;
+	 }
+
+	 bool isEmpty()
+	 {
+		 return isEmpty(_Value);
+	 }
 };
 
